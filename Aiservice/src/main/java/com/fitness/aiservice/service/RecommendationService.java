@@ -3,7 +3,6 @@ package com.fitness.aiservice.service;
 import com.fitness.aiservice.Repository.RecommendationRepository;
 import com.fitness.aiservice.models.Recommendation;
 import lombok.RequiredArgsConstructor;
-import org.jspecify.annotations.Nullable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,7 +13,7 @@ public class RecommendationService {
     private final RecommendationRepository recommendationRepository;
 
 
-    public  List<Recommendation> getUserRecommendatoin(String userId) {
+    public  List<Recommendation> getUserRecommendation(String userId) {
         return recommendationRepository.findByUserId(userId);
     }
 
