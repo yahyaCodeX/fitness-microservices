@@ -31,6 +31,11 @@ public class UserController {
     public ResponseEntity<Boolean> validateUser(@PathVariable String userId){
         return ResponseEntity.ok(userService.existsById(userId));
     }
+    @GetMapping("/health")
+    public ResponseEntity<String> health() {
+        return ResponseEntity.ok("User Service is UP");
+    }
+
 
 
 }
