@@ -10,35 +10,35 @@ import org.springframework.web.reactive.function.client.WebClientResponseExcepti
 public class userValidationService {
     private final WebClient userServiceWebClient;
 
-//    public boolean validateUser(String userId){
-//        try{
-//            return Boolean.TRUE.equals(userServiceWebClient.get()
-//                    .uri("/api/users/{userId}/validate", userId)
-//                    .retrieve()
-//                    .bodyToMono(Boolean.class)
-//                    .block());
-//
-//        } catch (WebClientResponseException e) {
-//            e.printStackTrace();
-//        }
-//        return  false;
-//    }
-
     public boolean validateUser(String userId){
-        try {
-            Boolean result = userServiceWebClient.get()
+        try{
+            return Boolean.TRUE.equals(userServiceWebClient.get()
                     .uri("/api/users/{userId}/validate", userId)
                     .retrieve()
                     .bodyToMono(Boolean.class)
-                    .block();
+                    .block());
 
-            System.out.println("UserService validation returned: " + result);
-            return result != null && result;
-
-        } catch (Exception e) {
-            System.out.println("Validation error: " + e.getMessage());
-            return false;
+        } catch (WebClientResponseException e) {
+            e.printStackTrace();
         }
+        return  false;
     }
+//
+//    public boolean validateUser(String userId){
+//        try {
+//            Boolean result = userServiceWebClient.get()
+//                    .uri("/api/users/{userId}/validate", userId)
+//                    .retrieve()
+//                    .bodyToMono(Boolean.class)
+//                    .block();
+//
+//            System.out.println("UserService validation returned: " + result);
+//            return result != null && result;
+//
+//        } catch (Exception e) {
+//            System.out.println("Validation error: " + e.getMessage());
+//            return false;
+//        }
+//    }
 
 }
