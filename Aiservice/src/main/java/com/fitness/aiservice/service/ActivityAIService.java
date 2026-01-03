@@ -60,6 +60,8 @@ public class ActivityAIService {
                     .activityId(activity.getId())
                     .userId(activity.getUserId())
                     .type(activity.getType().toString())
+                    .duration(activity.getDuration())
+                    .caloriesBurned(activity.getCaloriesBurned())
                     .recommendation(fullAnalysis.toString())
                     .improvements(improvements)
                     .suggestions(suggestions)
