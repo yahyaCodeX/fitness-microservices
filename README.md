@@ -8,6 +8,9 @@ Here is a professional, well-structured `README.md` text you can copy and paste 
 
 A high-performance, full-stack fitness tracking application featuring a **Neon Dark UI** and **AI-driven performance analysis**. This project utilizes a microservices architecture to manage user activities and generate personalized health recommendations.
 
+![WhatsApp Image 2026-01-04 at 2 05 25 AM](https://github.com/user-attachments/assets/64bf68b4-dcb8-44f5-955e-9edaf9ce73c7)
+
+
 ## 🚀 Key Features
 
 * **Modern Neon UI**: An attractive, high-energy dark mode interface built with React and Material UI.
